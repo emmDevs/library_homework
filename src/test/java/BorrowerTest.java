@@ -14,6 +14,8 @@ public class BorrowerTest {
     public void setUp(){
         borrower = new Borrower();
         library = new Library(5);
+        library.addBook(warAndPeace);
+        library.addBook(theSecretGarden);
         warAndPeace = new Book("War and Peace", "Leo Tolstoy", "Historical Fiction");
         theSecretGarden = new Book("The Secret Garden", "Frances Hodgson Burnett", "Fantasy Fiction");
     }
@@ -21,5 +23,17 @@ public class BorrowerTest {
     @Test
     public void borrowerHasBorrowedBooks(){
         assertEquals(0, borrower.countBorrowedBooks());
+    }
+
+//    @Test
+//    public void borrowBook(){
+//        borrower.borrowBook(library);
+//        assertEquals(1, borrower.countBorrowedBooks());
+//    }
+
+    @Test
+    public void addBookToBorrowedBooks(){
+        borrower.addBook(warAndPeace);
+        assertEquals(1, borrower.countBorrowedBooks());
     }
 }
