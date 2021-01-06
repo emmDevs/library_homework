@@ -19,4 +19,11 @@ public class Library {
             this.bookCollection.add(book);
         }
     }
+
+    public Book removeBook(Book book) {
+        if (this.bookCollection.contains(book)){
+            this.bookCollection.remove(book);
+        }
+        return book;
+    }
 }
