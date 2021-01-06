@@ -25,11 +25,11 @@ public class BorrowerTest {
         assertEquals(0, borrower.countBorrowedBooks());
     }
 
-//    @Test
-//    public void borrowBook(){
-//        borrower.borrowBook(library);
-//        assertEquals(1, borrower.countBorrowedBooks());
-//    }
+    @Test
+    public void borrowBookFromLibrary(){
+        borrower.borrowBook(library, theSecretGarden);
+        assertEquals(1, borrower.countBorrowedBooks());
+    }
 
     @Test
     public void addBookToBorrowedBooks(){
